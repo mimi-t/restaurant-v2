@@ -31,13 +31,13 @@ function createMenu() {
     dishSection.append(dishSubheading, dishList);
 
     // image
-    const sideImage = document.createElement('img'); 
-    sideImage.src = closeupImage;
+    const topImage = document.createElement('img'); 
+    topImage.src = closeupImage;
 
     const mainDiv = document.createElement('main');
-    mainDiv.append(heading, soupSection, dishSection);
+    mainDiv.append(heading, topImage, soupSection, dishSection);
 
-    return [mainDiv, sideImage];
+    return [mainDiv];
 }
 
 export { createMenu };

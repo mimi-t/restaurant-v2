@@ -61,6 +61,7 @@ body {
   place-items: center;
 
   --main-color: #ebff7b;
+  --accent-color: #15d5f7;
   background-color: var(--main-color);
 }
 
@@ -88,8 +89,9 @@ h1, h2, h3, h4, h5, h6 {
 #content {
     display: flex;
     gap: 2rem;
-    margin: 4rem;
+    margin: 2rem 4rem;
     max-width: 850px;
+    align-items: flex-start;
 }
 
 #content h2 {
@@ -105,4 +107,37 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;  
+}
+
+header button {
+    all: unset;
+    cursor: pointer;
+    outline: var(--accent-color) 1px auto;
+    padding: 0.5rem 1rem;
+
+    font-size: 1.25rem;
+}
+
+.selected-button {
+    font-weight: bold;
+    background-color: var(--accent-color);
+    animation-name: scale-width;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+}
+
+@keyframes scale-width {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(1.25);
+  }
 }
