@@ -1,11 +1,35 @@
+import { createAbout } from './about';
+import { createMenu } from './menu';
 import tableImage from './assets/yihan-wang-table.jpg'
 
-const heroImage = document.createElement('img'); 
-heroImage.src = tableImage;
-const heading = document.createElement('h1');
-heading.textContent = 'Mala Hot Pot';
-const description = document.createElement('p');
-description.textContent = 'Hotpot from the southwestern region of China - Sichuan. Decades of experience in serving thousands of customers.'
+function createHome() {
+    const heroImage = document.createElement('img'); 
+    heroImage.src = tableImage;
+    const heading = document.createElement('h1');
+    heading.textContent = 'Mala Hot Pot';
+    const description = document.createElement('p');
+    description.textContent = 'Hotpot from the southwestern region of China - Sichuan. Decades of experience in serving thousands of customers.';
+    return [heroImage, heading, description];
+}
 
 const contentContainer = document.querySelector('#content');
-contentContainer.append(heroImage, heading, description);
+contentContainer.append(...createHome());
+
+const homeButton = document.querySelector('#home');
+const menuButton = document.querySelector('#menu');
+const aboutButton = document.querySelector('#about');
+
+homeButton.addEventListener('click', () => {
+    contentContainer.innerHTML = '';
+    contentContainer.append(...createHome());
+});
+
+menuButton.addEventListener('click', () => {
+    contentContainer.innerHTML = '';
+    contentContainer.append(...createMenu());
+});
+
+aboutButton.addEventListener('click', () => {
+    contentContainer.innerHTML = '';
+    contentContainer.append(...createAbout());
+});
