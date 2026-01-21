@@ -1,7 +1,10 @@
+import closeupImage from './assets/images/peijia-li-closeup.jpg';
+
 function createMenu() {
     const heading = document.createElement('h1');
     heading.textContent = 'Menu';
 
+    // soup bases section
     const soupSubheading = document.createElement('h2');
     soupSubheading.textContent = 'Soup Bases';
     const soupList = document.createElement('ul');
@@ -11,7 +14,10 @@ function createMenu() {
         soupItem.textContent = soup;
         soupList.append(soupItem);
     });
+    const soupSection = document.createElement('section');
+    soupSection.append(soupSubheading, soupList);
 
+    // dishes section
     const dishSubheading = document.createElement('h2');
     dishSubheading.textContent = 'Dishes';
     const dishList = document.createElement('ul');
@@ -21,8 +27,17 @@ function createMenu() {
         dishItem.textContent = dish;
         dishList.append(dishItem);
     });
+    const dishSection = document.createElement('section');
+    dishSection.append(dishSubheading, dishList);
 
-    return [heading, soupSubheading, soupList, dishSubheading, dishList];
+    // image
+    const sideImage = document.createElement('img'); 
+    sideImage.src = closeupImage;
+
+    const mainDiv = document.createElement('main');
+    mainDiv.append(heading, soupSection, dishSection);
+
+    return [mainDiv, sideImage];
 }
 
 export { createMenu };

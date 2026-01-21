@@ -55,6 +55,13 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Barlow', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  place-items: center;
+
+  --main-color: #ebff7b;
+  background-color: var(--main-color);
 }
 
 img, picture, video, canvas, svg {
@@ -76,4 +83,26 @@ p {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
   font-family: 'Special Gothic Expanded One', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#content {
+    display: flex;
+    gap: 2rem;
+    margin: 4rem;
+    max-width: 850px;
+}
+
+#content h2 {
+    margin-bottom: 0.5rem;
+}
+
+#content img {
+    max-width: 450px;
+    object-fit: contain;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
