@@ -1,14 +1,18 @@
 import { createAbout } from './about';
 import { createMenu } from './menu';
-import tableImage from './assets/yihan-wang-table.jpg'
+import './styles.css'
+// import tableImage from './assets/images/yihan-wang-table.jpg'
+import ingredientsImage from './assets/images/peijia-li-ingredients.jpg';
 
 function createHome() {
     const heroImage = document.createElement('img'); 
-    heroImage.src = tableImage;
+    heroImage.src = ingredientsImage;
     const heading = document.createElement('h1');
     heading.textContent = 'Mala Hot Pot';
     const description = document.createElement('p');
     description.textContent = 'Hotpot from the southwestern region of China - Sichuan. Decades of experience in serving thousands of customers.';
+
+
     return [heroImage, heading, description];
 }
 

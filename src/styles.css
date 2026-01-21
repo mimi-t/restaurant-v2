@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Barlow';
+    src: url('./assets/fonts/Barlow-BoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/Barlow-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('./assets/fonts/Barlow-Italic.woff2') format('woff2'),
+        url('./assets/fonts/Barlow-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('./assets/fonts/Barlow-Bold.woff2') format('woff2'),
+        url('./assets/fonts/Barlow-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('./assets/fonts/Barlow-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Barlow-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Special Gothic Expanded One';
+    src: url('./assets/fonts/SpecialGothicExpandedOne-Regular.woff2') format('woff2'),
+        url('./assets/fonts/SpecialGothicExpandedOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Barlow', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  font-family: 'Special Gothic Expanded One', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
